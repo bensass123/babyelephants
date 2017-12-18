@@ -58,6 +58,6 @@ typings/
 # dotenv environment variables file
 .env
 
-#email list
+# email list
 emails.txt
 
