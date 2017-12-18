@@ -37,7 +37,7 @@ var getCurrentFile = () => {
 }
 
 var updateCurrentTextFile = () => {
-  fs.writeFile('current.txt', currentInd, (err) => {
+  fs.writeFile(path.join(__dirname,'current.txt'), currentInd, (err) => {
     if (err) throw err;
     console.log('The index file has been updated! Index: ' + currentInd);
     });
@@ -48,7 +48,7 @@ var sendIt = () => {
     service: 'gmail',
     auth: {
       user: 'bensass123@gmail.com',
-      pass: '----'
+      pass: '---'
     }
   });
 
@@ -56,7 +56,7 @@ var sendIt = () => {
     from: 'bensass123@gmail.com',
     to: 'bensass123@gmail.com',
     subject: 'Sending Email using Node.js test 1',
-    html: '<div><h1>Your baby elephant gif for the day  :)</h1><h3>Video is attached below.</h3></div>',
+    html: '<div><h1>A fresh and delightful baby elephant gif for you  :)</h1><h3>Video is attached below.</h3></div>',
     attachments: [
       {
         filename: file,
